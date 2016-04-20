@@ -1,13 +1,15 @@
 This is a base implementation of the strategy pattern.  Stay Hungry. Stay Humble.  
 
-# Building the code
+# Building the code.  Clean deletes the target dir and wipes out the previous build.  Compile is self-explanatory, and package generates the jar file along with the application's dependencies.
 mvn3 clean compile package
 
 # Start/Run the application
+# It may take a few seconds to start. It's ready to process requests when you see the message 'Started ServiceApplication in xx.xx seconds' 
 java -jar target/strategy_pattern-0.1.0.jar
 
 # Send a request to the web service
-This is the base request for moving a cart through the mine shaft.  Note that the output is piped to python - this is done to pretty print the JSON output.
+#This is the base request for processing the sample blog and loan requests.  Note that the output is piped to python - this is done to pretty print the JSON output.
+#You can use either of the sample payloads included at the project root.
 curl -H 'Content-Type: application/json' -H 'Accept: application/json' -XPOST -d @blog.json http://localhost:8080/transactions | python -mjson.tool
 
 # Git help
@@ -32,4 +34,4 @@ git branch [branch name]
 git checkout [branch name] (then use git status to see that you are in fact on that branch)
 
 # set the remote origin so that you will be authorized to push changes to the repo
-git remote set-url origin https://github.com/dancarrillo/strategy-pattern.git
+git remote set-url origin https://dancarrillo@github.com/dancarrillo/strategy-pattern.git
