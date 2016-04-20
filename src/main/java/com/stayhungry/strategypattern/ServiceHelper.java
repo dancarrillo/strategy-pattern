@@ -1,5 +1,7 @@
 package com.stayhungry.strategypattern;
 
+import com.stayhungry.strategypattern.strategies.DecisioningStrategy;
+
 public class ServiceHelper {
 	private final String url;
 	private final DecisioningStrategy decisioningStrategy;
